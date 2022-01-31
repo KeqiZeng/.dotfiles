@@ -1,0 +1,35 @@
+# move time to the right
+right_format = """$time"""
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+vicmd_symbol = "[](bold green) "
+
+[battery]
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[cmd_duration]
+format = "[神$duration](bold yellow)"
+
+[directory]
+truncation_length = 5
+format = "[ $path](bold blue)[$read_only](red) "
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "🌱 "
+
+[time]
+disabled = false
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+
+[username]
+style_user = "bold green"
+format = "[$user]($style) "
+show_always = true

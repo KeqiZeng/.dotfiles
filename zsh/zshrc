@@ -1,0 +1,106 @@
+# env
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+export GO111MOULE=auto
+export GOPROXY=goproxy.cn
+
+# editor
+if [[ -n $SSH_CONNECTION ]]; then
+ export EDITOR='vim'
+else
+ export EDITOR='nvim'
+fi
+
+# alias
+alias n='neofetch --config ~/.dotfiles/neofetch/config.conf'
+alias c='clear'
+alias td='tldr'
+alias ra='ranger'
+alias lg='lazygit'
+alias nv='nvim'
+alias bi='brew install'
+alias bu='brew update'
+alias bU='brew upgrade'
+alias bs='brew search'
+alias bd='brew uninstall'
+alias br='brew rmtree'
+alias bc='brew cleanup'
+alias jn='jupyter notebook'
+alias condaa='conda activate'
+alias condad='conda deactivate'
+eval $(thefuck --alias f)
+
+if [ "$(command -v bat)" ]; then
+	unalias -m 'cat'
+	alias cat='bat'
+fi
+
+# copy the content of a file to clipboard use bat
+function yank ()
+{
+	bat -p $1 | pbcopy
+	echo "The content of $1 has been copied to clipboard."
+}
+
+alias luamake=/usr/local/lua-language-server/3rd/luamake/luamake
+
+# plugin for zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+#keymap
+# zsh-vi-mode
+bindkey -M vicmd "H" vi-beginning-of-line
+bindkey -M vicmd "L" vi-end-of-line
+
+# substring-search
+#bindkey -M vicmd 'k' history-substring-search-up
+#bindkey -M vicmd 'j' history-substring-search-down
+
+# starship
+eval "$(starship init zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/ketch/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/ketch/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ketch/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/ketch/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# zoxide
+eval "$(zoxide init zsh --cmd j)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_OPTS='--bind ctrl-d:preview-down,ctrl-u:preview-up
+                         --border
+						 --preview "if [ -d {} ]; then echo {} is a directory. ls -1: && ls -1 {} | head -500; else if [[ $(file --mime {}) =~ binary ]]; then echo {} is a binary file; else bat --style=numbers --color=always --line-range :500 {}; fi; fi"
+						 --color=bg+:#3F3F3F,bg:#252525,border:#6B6B6B,spinner:#98C378,hl:#719872,fg:#D9D9D9,header:#719872,info:#E5C07B,pointer:#E12672,marker:#E5C07B,fg+:#D9D9D9,preview-bg:#1E1E1E,prompt:#BB88E5,hl+:#98C378
+						 '
+
+export FZF_CTRL_R_OPTS='--preview "echo {}"' 
+export FZF_COMPLETION_TRIGGER='\'
+export FZF_DEFAULT_COMMAND='fd --hidden --follow -E .git -E .DS_Store'
+
+# using ripgrep combined with preview
+# find-in-file - usage: fif <searchTerm>
+function fif() {
+  if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
+  rg --files-with-matches --no-messages --hidden "$1" | fzf --preview "bat --color=always | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
+}
