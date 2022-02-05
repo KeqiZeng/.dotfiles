@@ -1,5 +1,5 @@
 # move time to the right
-right_format = """$time"""
+# right_format = """$time"""
 
 [character]
 success_symbol = "[➜](bold green) "
@@ -24,8 +24,15 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = "🌱 "
 
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[conda]
+format = "[$symbol$environment](green) "
+
 [time]
-disabled = false
+disabled = true
 format = '🕙[\[ $time \]]($style) '
 time_format = "%T"
 
