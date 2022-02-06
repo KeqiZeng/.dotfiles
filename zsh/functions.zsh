@@ -1,3 +1,8 @@
+# set keybinds of some special plugins after initialization of zsh-vi-mode
+function zvm_after_init() {
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
+
 # copy the content of a file to clipboard use bat
 function yank ()
 {

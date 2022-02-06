@@ -17,8 +17,6 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" . "$1"
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 # fzf-tab
 # kill 结束进程时时提供预览

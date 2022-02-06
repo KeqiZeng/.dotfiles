@@ -7,6 +7,9 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 # batconfig
 export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
+# autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
+
 # zsh-vi-mode
 export ZVM_VI_SURROUND_BINDKEY=s-prefix
 

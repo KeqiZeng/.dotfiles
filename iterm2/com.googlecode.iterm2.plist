@@ -793,6 +793,17 @@
 	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x44-0x120000-0x2</key>
+		<dict>
+			<key>Action</key>
+			<integer>8</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x48-0x120000-0x4</key>
 		<dict>
 			<key>Action</key>
@@ -837,10 +848,10 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x4e-0x120000-0x2d</key>
+		<key>0x55-0x120000-0x20</key>
 		<dict>
 			<key>Action</key>
-			<integer>30</integer>
+			<integer>9</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
@@ -848,7 +859,7 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
-		<key>0x50-0x120000-0x23</key>
+		<key>0x7b-0x120000-0x21</key>
 		<dict>
 			<key>Action</key>
 			<integer>31</integer>
@@ -859,32 +870,21 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
-		<key>0xf700-0x300000-0x7e</key>
+		<key>0x7d-0x120000-0x1e</key>
 		<dict>
 			<key>Action</key>
-			<integer>9</integer>
+			<integer>30</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
 			<string></string>
 			<key>Version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>0xf700-0x320000-0x7e</key>
 		<dict>
 			<key>Action</key>
 			<integer>5</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string></string>
-			<key>Version</key>
-			<integer>0</integer>
-		</dict>
-		<key>0xf701-0x300000-0x7d</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
@@ -903,7 +903,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0xf702-0x300000-0x7b</key>
+		<key>0xf702-0x320000-0x7b</key>
 		<dict>
 			<key>Action</key>
 			<integer>33</integer>
@@ -914,7 +914,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0xf703-0x300000-0x7c</key>
+		<key>0xf703-0x320000-0x7c</key>
 		<dict>
 			<key>Action</key>
 			<integer>34</integer>
@@ -1227,15 +1227,15 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<integer>1</integer>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.85098039215686272</real>
+				<real>0.80000000000000004</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.85098039215686272</real>
+				<real>0.80000000000000004</real>
 				<key>Red Component</key>
-				<real>0.85098039215686272</real>
+				<real>0.80000000000000004</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1253,15 +1253,15 @@
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<integer>1</integer>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.98039215686274506</real>
+				<real>0.11764705882352941</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.98039215686274506</real>
+				<real>0.11764705882352941</real>
 				<key>Red Component</key>
-				<real>0.98039215686274506</real>
+				<real>0.11764705882352941</real>
 			</dict>
 			<key>Custom Command</key>
 			<string>No</string>
@@ -1297,7 +1297,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>source ~/.fzf.zsh;clear</string>
+			<string></string>
 			<key>Initial Use Transparency</key>
 			<true/>
 			<key>Jobs to Ignore</key>
@@ -1960,7 +1960,7 @@
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>SwitchWindowModifier</key>
-	<integer>5</integer>
+	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>6</integer>
 	<key>TabViewType</key>
