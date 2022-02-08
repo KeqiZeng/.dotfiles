@@ -3,9 +3,9 @@ right_format = """$time"""
 
 [character]
 # success_symbol = "[](bold green)"
-success_symbol = "[](bold green)"
-# # error_symbol = "[✗](bold red) "
-error_symbol = "[](bold red) "
+success_symbol = "⚽️ "
+# error_symbol = "[✗](bold red) "
+error_symbol = "💣 "
 vicmd_symbol = "[](bold green) "
 
 [battery]
