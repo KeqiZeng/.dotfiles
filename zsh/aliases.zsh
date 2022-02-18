@@ -16,6 +16,7 @@ alias bl='brew list'
 alias jn='jupyter notebook'
 alias condaa='conda activate'
 alias condad='conda deactivate'
+alias rime-install='~/plum/rime-install'
 alias luamake=/usr/local/lua-language-server/3rd/luamake/luamake
 
 if [ "$(command -v bat)" ]; then
