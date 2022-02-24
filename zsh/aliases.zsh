@@ -27,3 +27,8 @@ if [ "$(command -v bat)" ]; then
 	unalias -m 'cat'
 	alias cat='bat --color always'
 fi
+
+if [ "$(command -v exa)" ]; then
+	unalias -m 'ls'
+	alias ls='exa --color always --icons'
+fi
