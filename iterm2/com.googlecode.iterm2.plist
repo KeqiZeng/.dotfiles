@@ -1215,8 +1215,6 @@
 				<key>Red Component</key>
 				<real>0.1803921568627451</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/ketch/Pictures/Wallpapers/cropped-5120-3200-1188103.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>0</integer>
 			<key>Badge Color</key>
