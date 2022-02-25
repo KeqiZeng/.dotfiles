@@ -1,5 +1,5 @@
 # auto download uz to manage plugins
-[[ -f ~/.dotfiles/zsh/uz/uz.zsh ]] || git clone https://github.com/maxrodrigo/uz.git ~/.dotfiles/zsh/uz
+[[ -f ~/.dotfiles/zsh/uz/uz.zsh ]] || git clone https://github.com/KeqiZeng/uz ~/.dotfiles/zsh/uz
 source ~/.dotfiles/zsh/uz/uz.zsh
 
 zadd Aloxaf/fzf-tab
