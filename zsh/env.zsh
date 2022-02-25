@@ -1,3 +1,5 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
 # ranger
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
@@ -8,10 +10,13 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
 # autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#888888"
 
 # zsh-vi-mode
 export ZVM_VI_SURROUND_BINDKEY=s-prefix
+
+# tealdeer
+export TEALDEER_CONFIG_DIR=$XDG_CONFIG_HOME/tealdeer
 
 # golang
 export GOPATH=$HOME/go
