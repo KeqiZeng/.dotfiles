@@ -1,6 +1,5 @@
 # auto download uz to manage plugins
 [[ -f ~/.dotfiles/zsh/uz/uz.zsh ]] || git clone https://github.com/KeqiZeng/uz ~/.dotfiles/zsh/uz
-source ~/.dotfiles/zsh/uz/uz.zsh
 
 plugins=('Aloxaf/fzf-tab'
 	     'zsh-users/zsh-completions'
@@ -9,6 +8,4 @@ plugins=('Aloxaf/fzf-tab'
 	     'jeffreytse/zsh-vi-mode'
    )
 
-for plugin in ${plugins[@]}; do
-	zadd $plugin
-done
+source ~/.dotfiles/zsh/uz/uz.zsh

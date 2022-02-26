@@ -9,6 +9,10 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 # batconfig
 export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
+# uz
+export UZ_USE_EXA=true
+export UZ_USE_BAT=true
+
 # autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#888888"
 
