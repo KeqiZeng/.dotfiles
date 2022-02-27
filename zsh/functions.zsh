@@ -23,6 +23,9 @@ function mkcd ()
 	fi
 }
 
+# calculate
+function cc() { python3 -c "from math import *; print($*);" }
+
 # find-in-file - usage: fif <searchTerm>
 function fif() {
   if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
