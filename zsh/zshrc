@@ -8,7 +8,7 @@ source ~/.dotfiles/zsh/aliases.zsh
 source ~/.dotfiles/zsh/functions.zsh
 
 # compinit
-autoload -U compinit && compinit
+autoload -U compinit && compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 # plugin for zsh
 source ~/.dotfiles/zsh/plugins.zsh

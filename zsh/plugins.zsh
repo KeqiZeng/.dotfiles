@@ -10,10 +10,4 @@ plugins=(
 		 'jeffreytse/zsh-vi-mode'
 	)
 
-dis_autoloads=(
-			   'hlissner/zsh-autopair'
-			   'zdharma-continuum/fast-syntax-highlighting'
-	)
-
-
 source ~/.dotfiles/zsh/uz/uz.zsh
