@@ -26,12 +26,22 @@ alias condad='conda deactivate'
 alias rime-install='~/plum/rime-install'
 alias luamake=/usr/local/lua-language-server/3rd/luamake/luamake
 
-if [ "$(command -v bat)" ]; then
-	unalias -m 'cat'
-	alias cat='bat --color always'
+# if [ "$(command -v bat)" ]; then
+# 	unalias -m 'cat'
+# 	alias cat='bat --color always'
+# fi
+
+# if [ "$(command -v exa)" ]; then
+# 	unalias -m 'ls'
+# 	alias ls='exa --color always --icons'
+# fi
+
+if [ "(( $+commands[bat] ))" ]; then
+    unalias -m 'cat'
+    alias cat='bat --color always'
 fi
 
-if [ "$(command -v exa)" ]; then
-	unalias -m 'ls'
-	alias ls='exa --color always --icons'
+if [ "(( $+commands[exa] ))" ]; then
+    unalias -m 'ls'
+    alias ls='exa --color always --icons'
 fi
