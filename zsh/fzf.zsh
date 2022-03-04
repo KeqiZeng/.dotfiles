@@ -1,5 +1,6 @@
 export FZF_DEFAULT_OPTS='--bind ctrl-d:preview-down,ctrl-u:preview-up,ctrl-p:toggle-preview
                          --border
+						 --layout=reverse
 						 --preview "if [[ -n {} ]]; then if [ -d {} ]; then echo {}/ && exa -1 --color always --icons {} | head -500; else if [[ $(file --mime {}) =~ binary ]]; then echo {} is a binary file; else bat --style=numbers --color=always --line-range :500 {}; fi; fi; fi"
 						 --preview-window hidden
 						 --color=bg+:#3f3f3f,bg:#252525,border:#6b6b6b,spinner:#98c378,hl:#98c378,fg:#d9d9d9,header:#98c378,info:#e5c07b,pointer:#ff9999,marker:#e5c07b,fg+:#d9d9d9,preview-bg:#1e1e1e,prompt:#bb88e5,hl+:#98c378

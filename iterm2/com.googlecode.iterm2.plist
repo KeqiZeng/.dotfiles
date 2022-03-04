@@ -1258,7 +1258,7 @@
 			<key>Columns</key>
 			<integer>96</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/bin/login -pfq ketch</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2264,7 +2264,7 @@
 			<key>Columns</key>
 			<integer>72</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/bin/login -pfq ketch</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
