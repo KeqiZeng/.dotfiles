@@ -25,6 +25,11 @@ function mkcd ()
 	fi
 }
 
+# rename
+function rename() {
+	mv $1 $(dirname $1)/$2
+}
+
 # calculate
 function cc() { python3 -c "from math import *; print($*);" }
 
