@@ -28,6 +28,10 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export GOPROXY=goproxy.cn
 
+# rust
+export RUSTUP_HOME=$HOME/rust/.rustup
+export CARGO_HOME=$HOME/rust/.cargo
+
 # editor
 if [[ -n $SSH_CONNECTION ]]; then
  export EDITOR='vim'

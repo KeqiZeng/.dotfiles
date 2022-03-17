@@ -983,6 +983,10 @@
 	<real>60</real>
 	<key>MinimumWeightDifferenceForBoldFont</key>
 	<integer>5</integer>
+	<key>NeverWarnAboutShortLivedSessions_AAC534CE-BCAD-42E3-99CF-BC3575188C2A</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_AAC534CE-BCAD-42E3-99CF-BC3575188C2A_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
