@@ -1,4 +1,5 @@
 alias s!='source ~/.zshrc'
+alias zshbench='for i in {0..10}; do \time zsh -i -c exit; done'
 alias n='neofetch --config ~/.dotfiles/neofetch/config.conf'
 alias c='clear'
 alias td='tldr'
