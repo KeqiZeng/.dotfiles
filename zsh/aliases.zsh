@@ -26,7 +26,6 @@ alias pipu='pip install --upgrade'
 alias py='python3'
 alias condaa='conda activate'
 alias condad='conda deactivate'
-alias rime-install='~/plum/rime-install'
 alias luamake=/usr/local/lua-language-server/3rd/luamake/luamake
 
 # if [ "$(command -v bat)" ]; then
