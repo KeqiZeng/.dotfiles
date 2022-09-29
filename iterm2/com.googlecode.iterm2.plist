@@ -977,6 +977,8 @@
 	<integer>524288</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>LeftOption</key>
+	<integer>2</integer>
 	<key>MetalRedrawPeriod</key>
 	<real>0.10000000149011612</real>
 	<key>MetalSlowFrameRate</key>
@@ -1181,15 +1183,15 @@
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<integer>1</integer>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.1803921568627451</real>
+				<real>0.24313725490196078</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1803921568627451</real>
+				<real>0.24313725490196078</real>
 				<key>Red Component</key>
-				<real>0.1803921568627451</real>
+				<real>0.24313725490196078</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1661,11 +1663,13 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
+			<key>Right Option Key Changeable</key>
+			<true/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Rows</key>
 			<integer>28</integer>
 			<key>Screen</key>
@@ -2674,6 +2678,8 @@
 					<string>[1;5F</string>
 				</dict>
 			</dict>
+			<key>Left Option Key Changeable</key>
+			<true/>
 			<key>Link Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2704,11 +2710,13 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
+			<key>Right Option Key Changeable</key>
+			<true/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -3113,7 +3121,7 @@
 	<key>disableMetalWhenUnplugged</key>
 	<false/>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 	<key>metalMaximizeThroughput</key>

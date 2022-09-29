@@ -28,6 +28,14 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export GOPROXY=goproxy.cn
 
+# mason for neovim
+export MASON_BIN=$HOME/.local/share/nvim/mason/bin
+export PATH=$PATH:$MASON_BIN
+
+# java
+export JDT_PATH=$HOME/jdt-language-server/bin
+export PATH=$PATH:$JDT_PATH
+
 # rust
 export RUSTUP_HOME=$HOME/rust/.rustup
 export CARGO_HOME=$HOME/rust/.cargo
