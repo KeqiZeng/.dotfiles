@@ -4,7 +4,7 @@ right_format = """$time"""
 
 [character]
 # success_symbol = "[](bold green)"
-success_symbol = "⚽️ "
+success_symbol = "🚀 "
 # error_symbol = "[✗](bold red) "
 error_symbol = "💣 "
 # vicmd_symbol = "[](bold green) "
