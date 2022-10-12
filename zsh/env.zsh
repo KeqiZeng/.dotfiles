@@ -1,5 +1,8 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
+#homebrew
+export PATH=/opt/homebrew/bin:$PATH
+
 # ranger
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
