@@ -20,4 +20,4 @@ eval "$(starship init zsh)"
 # fzf
 source ~/.dotfiles/zsh/fzf.zsh
 
-export HOMEBREW_GITHUB_API_TOKEN=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
+export HOMEBREW_GITHUB_API_TOKEN=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

@@ -29,7 +29,7 @@ export TEALDEER_CONFIG_DIR=$XDG_CONFIG_HOME/tealdeer
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
-export GOPROXY=goproxy.cn
+# export GOPROXY=goproxy.cn
 
 # mason for neovim
 export MASON_BIN=$HOME/.local/share/nvim/mason/bin
