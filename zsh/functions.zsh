@@ -1,10 +1,3 @@
-# set keybinds of some special plugins after initialization of zsh-vi-mode
-function zvm_after_init() {
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-  zload hlissner/zsh-autopair
-  zload zdharma-continuum/fast-syntax-highlighting
-}
-
 # copy the content of a file to clipboard use bat
 function yank ()
 {
@@ -39,13 +32,6 @@ function fif() {
   rg --files-with-matches --no-messages --hidden "$1" | fzf --preview "bat --color=always | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
 }
 
-# Zoxide lazyload
-function j () {
-	unfunction j
-	eval "$(zoxide init zsh --cmd j)"
-	j $@
-}
-
 # Thefuck lazyload
 function f () {
 	unfunction f
@@ -53,41 +39,11 @@ function f () {
 	f
 }
 
-# Conda lazyload
-function conda() {
-	unfunction conda
-	# >>> conda initialize >>>
-	# !! Contents within this block are managed by 'conda init' !!
-	__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-	if [ $? -eq 0 ]; then
-		eval "$__conda_setup"
-	else
-		if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-			. "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-		else
-			export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-		fi
-	fi
-	unset __conda_setup
-	# <<< conda initialize <<<
-	conda $@
-}
+# Sketchybar event
+function brew () {
+  command brew "$@"
 
-function conda-env() {
-	unfunction conda-env
-	# >>> conda initialize >>>
-	# !! Contents within this block are managed by 'conda init' !!
-	__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-	if [ $? -eq 0 ]; then
-		eval "$__conda_setup"
-	else
-		if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-			. "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-		else
-			export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-		fi
-	fi
-	unset __conda_setup
-	# <<< conda initialize <<<
-	conda-env $@
+  if [[ $* == "upgrade" ]]; then
+    sketchybar --trigger brew_upgrade
+  fi
 }

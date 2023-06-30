@@ -1213,13 +1213,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.1803921568627451</real>
+				<real>0.18823529411764706</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1803921568627451</real>
+				<real>0.18823529411764706</real>
 				<key>Red Component</key>
-				<real>0.1803921568627451</real>
+				<real>0.18823529411764706</real>
 			</dict>
 			<key>Background Image Mode</key>
 			<integer>0</integer>
@@ -1323,13 +1323,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.94509803921568625</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.94509803921568625</real>
 				<key>Red Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.94509803921568625</real>
 			</dict>
 			<key>Guid</key>
 			<string>AAC534CE-BCAD-42E3-99CF-BC3575188C2A</string>
@@ -1659,7 +1659,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMono-Regular 18</string>
+			<string>JetBrainsMonoNerdFontComplete-Regular 18</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1985,7 +1985,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Use Underline Color</key>
@@ -3124,6 +3124,8 @@
 	<false/>
 	<key>disableMetalWhenUnplugged</key>
 	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
