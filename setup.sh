@@ -1,6 +1,7 @@
 #!/bin/bash
 # in .dotfiles directory
 ln -s $(pwd)/zsh/zshrc ~/.zshrc
+ln -s $(pwd)/zsh/zshenv ~/.zshenv
 ln -s $(pwd)/starship/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/stylua/stylua.toml ~/.config/stylua.toml
 ln -s $(pwd)/ranger ~/.config/ranger

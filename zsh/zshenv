@@ -1,0 +1,65 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
+#homebrew
+# export PATH=/opt/homebrew/bin:$PATH
+export HOMEBREW_BIN=/opt/homebrew/bin
+# uz
+export UZ_USE_EXA=true
+export UZ_USE_BAT=true
+
+# ranger
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+# batconfig
+export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
+
+# tealdeer
+export TEALDEER_CONFIG_DIR=$XDG_CONFIG_HOME/tealdeer
+
+# autosuggestions
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#9399b2"
+
+# golang
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+# export PATH=$PATH:$GOBIN
+# export GOPROXY=goproxy.cn
+
+# java
+export JDT_PATH=$HOME/jdt-language-server/bin
+# export PATH=$PATH:$JDT_PATH
+
+# rust
+export RUSTUP_HOME=$HOME/rust/.rustup
+export CARGO_HOME=$HOME/rust/.cargo
+. "/Users/ketch/rust/.cargo/env"
+
+# editor
+if [[ -n $SSH_CONNECTION ]]; then
+ export EDITOR='vim'
+else
+ export EDITOR='nvim'
+fi
+
+# mason for neovim
+export MASON_BIN=$HOME/.local/share/nvim/mason/bin
+# export PATH=$PATH:$MASON_BIN
+
+# pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# conda
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+  eval "$__conda_setup"
+else
+  if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+    . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+  else
+    # export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+    export CONDA_BIN=/opt/homebrew/Caskroom/miniforge/base/bin
+  fi
+fi
+unset __conda_setup
+
+export PATH=$PATH:$HOMEBREW_BIN:$GOBIN:$JDT_PATH:$MASON_BIN:$CONDA_BIN
