@@ -4,8 +4,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = Ketch Zeng
-	email = zengkeqi1999@outlook.com
+	name = Keqi Zeng
+	email = ketchz0206@outlook.com
 [http]
 	sslVerify = true
 

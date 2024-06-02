@@ -8,25 +8,10 @@
 export FZF_DEFAULT_OPTS='--bind ctrl-d:preview-down,ctrl-u:preview-up,ctrl-p:toggle-preview
                          --border
 						             --layout=reverse
-						             --preview "if [[ {} =~ ('.jpg'|'.JPG'|'.jpeg'|'.png'|'.PNG')$ ]]; then kitty +kitten icat {}; else; if [[ -n {} ]]; then if [ -d {} ]; then echo {}/ && exa -1 --color always --icons {} | head -500; elif [[ $(file --mime {}) =~ binary ]]; then echo {} is a binary file; else bat --style=numbers --color=always --line-range :500 {}; fi; fi; fi"
+						             --preview "~/scripts/fzf-preview.sh {}"
 						             --preview-window hidden
 						             --color=bg+:#313244,bg:#1e1e2e,border:#6b6b6b,spinner:#f5e0dc,hl:#f38ba8,fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc,marker:#f5e0dc,fg+:#cdd6f4,preview-bg:#1e1e2e,prompt:#cba6f7,hl+:#f38ba8
 						 '
-
-# if [[ $1 =~ ('.jpg'|'.JPG'|'.jpeg'|'.png'|'.PNG')$ ]]; then
-# 	kitty +kitten icat $1
-# else
-# 	if [[ -n $1 ]]; then
-# 		if [ -d $1 ]; then
-# 			echo $1/ && exa -1 --color always --icons $1 | head -500
-# 		elif [[ $(file --mime {$1}) =~ binary ]]; then
-# 			echo $1 is a binary file
-# 		else
-# 			bat --style=numbers --color=always --line-range :500 $1
-# 		fi
-# 	fi
-# fi
-#
 
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude ".{cache,gem,git,npm,DS_Store}" --exclude "{node_modules}"'

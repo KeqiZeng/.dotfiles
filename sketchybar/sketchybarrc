@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# === Path definition ===
+ITEMS_DIR="$HOME/.config/sketchybar/items/"
+SCRIPT_DIR="$HOME/.config/sketchybar/scripts/"
+
+# === Color ===
+source "$HOME/.config/sketchybar/colors.sh"
+
+# === Icon ===
+source "$HOME/.config/sketchybar/icons.sh"
+
+# === Font
+FONT="JetBrains Mono"
+# NERD_FONT="Symbols Nerd Font Mono"
+NERD_FONT="SFMono Nerd Font"
+# APP_FONT="sketchybar-app-font"
+
+source "$ITEMS_DIR/bar.sh"
+source "$ITEMS_DIR/default.sh"
+source "$ITEMS_DIR/apple.sh"
+source "$ITEMS_DIR/space.sh"
+source "$ITEMS_DIR/yabai.sh"
+source "$ITEMS_DIR/front_app.sh"
+
+source "$ITEMS_DIR/calender.sh"
+source "$ITEMS_DIR/battery.sh"
+source "$ITEMS_DIR/volume.sh"
+source "$ITEMS_DIR/brew.sh"
+
+source "$ITEMS_DIR/toogle_stats.sh"
+source "$ITEMS_DIR/cpu.sh"
+source "$ITEMS_DIR/ram.sh"
+source "$ITEMS_DIR/disk.sh"
+source "$ITEMS_DIR/network.sh"
+source "$ITEMS_DIR/airpods_battery.sh"
+
+# source "$ITEMS_DIR/brackets.sh"
+
+sketchybar --update

@@ -1,0 +1,13 @@
+# : Flavor {{{
+
+[flavor]
+use = "catppuccin-mocha"
+
+# : }}}
+
+# : Manager {{{
+
+[manager]
+preview_hovered = { bold = true, italic = true }
+
+# # : }}}

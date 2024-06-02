@@ -1,28 +1,30 @@
 command_timeout = 10000
+scan_timeout = 10
 # move time to the right
 right_format = """$time"""
 
 [character]
-# success_symbol = "[](bold green)"
 success_symbol = "🚀 "
-# error_symbol = "[✗](bold red) "
 error_symbol = "💣 "
-# vicmd_symbol = "[](bold green) "
 vicmd_symbol = "🎃 "
+vimcmd_visual_symbol = "🔬 "
+vimcmd_replace_one_symbol = "🚧 "
+vimcmd_replace_symbol = "🚧 "
 
 [battery]
-charging_symbol = "⚡️ "
-discharging_symbol = "💀 "
+charging_symbol = "⚡ "
+discharging_symbol = "🪫 "
 [[battery.display]]
 threshold = 30
 style = "bold red"
 
 [cmd_duration]
-format = "[神$duration](bold yellow)"
+format = "[󰔚 $duration](bold yellow)"
 
 [directory]
 truncation_length = 5
-format = "[ $path](bold blue)[$read_only](red) "
+# format = "[ $path](bold blue)[$read_only](red) "
+format = "[$path](bold blue)[$read_only](red) "
 truncation_symbol = "…/"
 
 [git_status]
@@ -34,17 +36,23 @@ behind = '⇣${count}'
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
 [conda]
-format = "[$symbol$environment](green) "
+symbol = "󰗦 "
+format = "in [$symbol$environment](green) "
 
 [time]
 disabled = false
-format = '🕙[\[ $time \]]($style) '
+format = '[󰔛 $time]($style)'
 time_format = "%T"
 
 [username]
 style_user = "bold green"
 format = "[$user]($style) "
-show_always = true
+show_always = false
+
+[sudo]
+style = 'bold mauve'
+symbol = '🧙 '
+disabled = false
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

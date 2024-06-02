@@ -1,0 +1,29 @@
+{
+	"title": "Left-Control + Space -> Capslock",
+	"rules": [
+		{
+			"description": "Map L-Ctrl + Space to Capslock",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "spacebar",
+						"modifiers": {
+							"mandatory": [
+								"control"
+							],
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "caps_lock"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,111 @@
+#!/usr/bin/env sh
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# global settings
+# first_child: new window spawns to the left if vertical split, or top if horizontal split
+yabai -m config window_placement second_child
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance off
+
+yabai -m config window_origin_display focused
+
+# floating windows are always on top (default: off)
+yabai -m config window_topmost off
+
+# modify window shadows (default: on, options: on, off, float)
+# example: show shadows only for floating windows
+yabai -m config window_shadow float
+
+# window opacity (default: off)
+# example: render all unfocused windows with 90% opacity
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.8
+
+# add 25 padding to the top and 0 padding to the bottom of all spaces regardless of the display it belongs to
+yabai -m config external_bar all:35:0
+
+# mouse support
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
+# set mouse interaction modifier key (default: fn)
+yabai -m config mouse_modifier ctrl
+
+# set modifier + left-click drag to move window (default: move)
+yabai -m config mouse_action1 move
+
+# set modifier + right-click drag to resize window (default: resize)
+yabai -m config mouse_action2 resize
+yabai -m config mouse_drop_action swap
+
+# general space settings
+yabai -m config layout bsp
+yabai -m config top_padding 0
+yabai -m config bottom_padding 0
+yabai -m config left_padding 0
+yabai -m config right_padding 0
+yabai -m config window_gap 10
+yabai -m config window_animation_duration 0.0
+
+# mission-control desktop labels
+yabai -m space 1 --label code
+yabai -m space 2 --label web
+yabai -m space 3 --label doc
+yabai -m space 4 --label mail
+yabai -m space 5 --label social
+yabai -m space 6 --label entertainment
+yabai -m space 7 --label matlab
+
+yabai -m config --space mail layout stack
+yabai -m config --space social layout float
+yabai -m config --space entertainment layout float
+yabai -m config --space matlab layout float
+
+# window rules
+yabai -m rule --add app="^System Settings$" manage=off grid=8:8:3:1:3:5
+yabai -m rule --add app="^Activity Monitor$" manage=off grid=10:8:3:1:4:6
+yabai -m rule --add app="^App Store$" manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^Finder$" manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^Mail$" space=mail
+yabai -m rule --add app="^python$" manage=off
+yabai -m rule --add app="^MATLAB" space=matlab manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^Zotero$" space=doc
+yabai -m rule --add app="^PDF Expert$" space=doc
+yabai -m rule --add app="^Microsoft Word" space=doc
+yabai -m rule --add app="^Microsoft Excel" space=doc
+yabai -m rule --add app="^Microsoft PowerPoint" space=doc
+# yabai -m rule --add app="^MATLAB$" title="^Figure" manage=off
+# yabai -m rule --add app="^MATLAB$" title="^Preferences" manage=off
+# yabai -m rule --add app="^MATLAB$" title="^MATLAB Benchmark" manage=off
+# yabai -m rule --add app="^MATLAB$" title="^Lissajous Plots$" manage=off
+yabai -m rule --add app="^EuDic$" manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^德语助手$" manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^pot$" manage=off
+yabai -m rule --add app="^Tencent Lemon$" manage=off
+yabai -m rule --add app="^哔哩哔哩$" space=entertainment manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^Spotify$" space=entertainment manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^QQ Music$" space=entertainment manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^WeChat$" space=social manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^WhatsApp$" space=social manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^Discord$" space=social manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^Microsoft Teams" space=social manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^zoom.us$" space=social manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^TencentMeeting$" space=social manage=off
+yabai -m rule --add app="^kitty$" title="^kitty$" manage=off grid=20:20:3:2:14:16
+yabai -m rule --add app="^kitty$" title!="^Scratchpad$" space=code
+yabai -m rule --add app="^Code$" space=code
+yabai -m rule --add app="^Google Chrome$" space=web
+
+# Scratchpad
+yabai -m rule --add app="kitty" title="Scratchpad" scratchpad="terminal" grid=20:20:3:2:14:16
+
+
+yabai -m signal -add event=window_focused action='sketchybar --trigger window_focus && echo "window_focused"'
+yabai -m signal --add event=window_created action='sh ~/.config/yabai/scripts/window_created.sh'
+yabai -m signal --add event=window_destroyed action='sketchybar --trigger window_destroy'
+yabai -m signal --add event=window_deminimized action='sketchybar --trigger window_deminimize'
+yabai -m signal --add event=window_minimized action='sketchybar --trigger window_minimize'
+
+echo "yabai configuration loaded.."
