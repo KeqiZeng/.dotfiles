@@ -20,4 +20,4 @@ ln -s $(pwd)/tealdeer ~/.config/tealdeer
 ln -s $(pwd)/tokei/.tokeirc ~/.tokeirc
 ln -s $(pwd)/latexmk/.latexmkrc ~/.latexmkrc
 
-# brew install yazi skhd yabai sketchybar fzf fd fish ripgrep starship fastfetch thefuck zoxide bat exz tokei tealdeer
+brew install yazi skhd yabai sketchybar fzf fd fish ripgrep starship fastfetch thefuck zoxide bat exz tokei tealdeer
