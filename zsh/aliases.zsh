@@ -1,6 +1,5 @@
 alias s!='source ~/.zshrc'
 alias zshbench='for i in {0..10}; do \time zsh -i -c exit; done'
-# alias n='neofetch --config ~/.dotfiles/neofetch/config.conf'
 alias n='fastfetch'
 alias c='clear'
 alias td='tldr'
@@ -11,10 +10,6 @@ alias nv='nvim'
 # Homebrew
 alias bi='brew install'
 alias bic='brew install --cask'
-alias fbi='fuzzy_brew_install'
-alias fbd='fuzzy_brew_uninstall'
-alias fbic='fuzzy_cask_install'
-alias fbdc='fuzzy_cask_uninstall'
 alias bu='brew upgrade'
 alias bs='brew search'
 alias bd='brew uninstall'
@@ -29,7 +24,6 @@ if [ "$TERM" = "xterm-kitty" ]; then
   alias diff='kitty +kitten diff'
 fi
 
-alias cc='noglob cc'
 alias tk='tokei'
 alias golint='golangci-lint --color always run'
 alias lmk='latexmk -pvc'
@@ -39,19 +33,14 @@ alias jnb='jupyter notebook'
 alias jlab='jupyter-lab'
 
 # usic
-alias uplay='usic 1>/dev/null && usic play "$(command find $USIC_PLAYLIST -type f | fzf | xargs -I{} sh -c "command cat "{}" | fzf")"'
-
-# conan
-alias conan_install='conan install conanfile.txt --output-folder=build --build=missing'
+# alias uplay='usic 1>/dev/null && usic play "$(command find $USIC_PLAYLIST -type f | fzf | xargs -I{} sh -c "command cat "{}" | fzf")"'
 
 # python
 alias pipu='pip install --upgrade'
-alias py='/opt/homebrew/Caskroom/miniforge/base/bin/python3'
-# alias pip='/opt/homebrew/Caskroom/miniforge/base/bin/pip'
-# alias pip3='/opt/homebrew/Caskroom/miniforge/base/bin/pip3'
 alias condaa='conda activate'
 alias condad='conda deactivate'
-alias luamake=/usr/local/lua-language-server/3rd/luamake/luamake
+alias maa='mamba activate'
+alias mad='mamba deactivate'
 
 # scripts
 # alias preview='sh ~/scripts/preview.sh'
@@ -62,9 +51,9 @@ if [ "(( $+commands[bat] ))" ]; then
     alias cat='bat'
 fi
 
-if [ "(( $+commands[exa] ))" ]; then
+if [ "(( $+commands[exz] ))" ]; then
     unalias -m 'ls'
-    alias ls='exa --color always --icons'
+    alias ls='exz --color always --icons'
 fi
 
 # cluser

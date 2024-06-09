@@ -1,8 +1,3 @@
-### Added by Codeium. These lines cannot be automatically removed if modified
-if command -v termium > /dev/null 2>&1; then
-  eval "$(termium shell-hook show pre)"
-fi
-### End of Codeium integration
 # alias
 source ~/.dotfiles/zsh/aliases.zsh
 
@@ -13,20 +8,20 @@ source ~/.dotfiles/zsh/functions.zsh
 source ~/.dotfiles/zsh/plugins.zsh
 
 # starship
-eval "$(starship init zsh)"
+type starship_zle-keymap-select >/dev/null || \
+{
+  echo "Load starship"
+  eval "$(starship init zsh)"
+}
 
 # zoxide
 eval "$(zoxide init zsh --cmd j)"
 
+# vim mode
+source ~/.dotfiles/zsh/vi.zsh
+
 # fzf
 source ~/.dotfiles/zsh/fzf.zsh
-
-BLK="04" CHR="04" DIR="04" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING="00" ORPHAN="01" FIFO="0F" SOCK="0F" OTHER="02"
-export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
-
-# >>> xmake >>>
-test -f "/Users/ketch/.xmake/profile" && source "/Users/ketch/.xmake/profile"
-# <<< xmake <<<
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -46,10 +41,3 @@ if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/mamba.sh" ]; then
     . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
-
-
-### Added by Codeium. These lines cannot be automatically removed if modified
-if command -v termium > /dev/null 2>&1; then
-  eval "$(termium shell-hook show post)"
-fi
-### End of Codeium integration

@@ -97,10 +97,10 @@ yabai -m rule --add app="^kitty$" title="^kitty$" manage=off grid=20:20:3:2:14:1
 yabai -m rule --add app="^kitty$" title!="^Scratchpad$" space=code
 yabai -m rule --add app="^Code$" space=code
 yabai -m rule --add app="^Google Chrome$" space=web
+yabai -m rule --add app="^Firefox$" space=web
 
 # Scratchpad
 yabai -m rule --add app="kitty" title="Scratchpad" scratchpad="terminal" grid=20:20:3:2:14:16
-
 
 yabai -m signal -add event=window_focused action='sketchybar --trigger window_focus && echo "window_focused"'
 yabai -m signal --add event=window_created action='sh ~/.config/yabai/scripts/window_created.sh'

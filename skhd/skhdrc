@@ -3,7 +3,7 @@
 alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
 
 # # open browser
-# ctrl + cmd - s : open -a /Applications/Safari.app/
+ctrl + cmd - s : open -a /Applications/Firefox.app/
 #
 # # open mail
 # ctrl + cmd - m : open -a /System/Applications/Mail.app/

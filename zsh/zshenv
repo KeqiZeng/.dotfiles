@@ -1,7 +1,6 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
 #homebrew
-# export PATH=/opt/homebrew/bin:$PATH
 export HOMEBREW_BIN=/opt/homebrew/bin
 
 # batconfig
@@ -38,15 +37,8 @@ export RUSTUP_HOME=$HOME/rust/.rustup
 export CARGO_HOME=$HOME/rust/.cargo
 . "/Users/ketch/rust/.cargo/env"
 
-# swift
-export TOOLCHAINS=swift
-
 # editor
-if [[ -n $SSH_CONNECTION ]]; then
- export EDITOR='vim'
-else
- export EDITOR='nvim'
-fi
+export EDITOR='nvim'
 
 # mason for neovim
 export MASON_BIN=$HOME/.local/share/nvim/mason/bin
