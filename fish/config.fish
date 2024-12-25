@@ -3,16 +3,17 @@ if status is-interactive
     set -gx XDG_CONFIG_HOME $HOME/.config
     set -gx BAT_CONFIG_PATH $HOME/.dotfiles/bat/bat.conf
     set -gx TEALDEER_CONFIG_DIR $XDG_CONFIG_HOME/tealdeer
-    set -gx SCRIPTS $HOME/scripts
     set -gx GOPATH $HOME/go
     set -gx RUSTUP_HOME $HOME/rust/.rustup
     set -gx CARGO_HOME $HOME/rust/.cargo
+    set -gx CC (brew --prefix llvm)/bin/clang
+    set -gx CXX (brew --prefix llvm)/bin/clang++
     set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
     set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
     set -gx LDFLAGS -L/opt/homebrew/opt/curl/lib
     set -gx CPPFLAGS -I/opt/homebrew/opt/curl/include
 
-    set -gx EDITOR nvim
+    set -gx EDITOR hx
 
     set fish_greeting ''
 
@@ -24,6 +25,7 @@ if status is-interactive
     fish_add_path -g /opt/homebrew/opt/llvm/bin
     fish_add_path -g /opt/homebrew/opt/curl/bin
     fish_add_path -g /Users/ketch/.local/share/nvim/mason/bin
+    fish_add_path -g $HOME/scripts
 
     # vim mode
     set -g fish_key_bindings fish_vi_key_bindings

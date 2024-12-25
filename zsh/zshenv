@@ -35,7 +35,7 @@ export GOBIN=$GOPATH/bin
 # rust
 export RUSTUP_HOME=$HOME/rust/.rustup
 export CARGO_HOME=$HOME/rust/.cargo
-. "/Users/ketch/rust/.cargo/env"
+export CARGO_BIN=$CARGO_HOME/bin
 
 # editor
 export EDITOR='nvim'
@@ -60,4 +60,4 @@ else
 fi
 unset __conda_setup
 
-export PATH=$PATH:$HOMEBREW_BIN:$SCRIPTS:$LLVM_BIN:$GOBIN:$JAVA_HOME:$MASON_BIN:$CONDA_BIN
+export PATH=$PATH:$HOMEBREW_BIN:$SCRIPTS:$LLVM_BIN:$GOBIN:$JAVA_HOME:$CARGO_BIN:$MASON_BIN:$CONDA_BIN

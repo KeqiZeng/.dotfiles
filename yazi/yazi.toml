@@ -1,3 +1,17 @@
 [manager]
-ratio          = [ 2, 3, 4 ]
+ratio          = [ 1, 2, 2 ]
 linemode       = "size"
+
+[preview]
+max_width  = 1200
+max_height = 1800
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"

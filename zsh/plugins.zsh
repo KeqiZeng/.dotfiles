@@ -1,5 +1,5 @@
 # auto download uz to manage plugins
-[[ -f ~/.dotfiles/zsh/uz/uz.zsh ]] || git clone https://github.com/KeqiZeng/uz ~/.dotfiles/zsh/uz
+[[ -d ~/.dotfiles/zsh/uz ]] || git clone https://github.com/KeqiZeng/uz ~/.dotfiles/zsh/uz
 
 declare -A plugins
 
