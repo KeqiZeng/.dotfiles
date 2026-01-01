@@ -1,0 +1,85 @@
+{
+  "activeWorkspaceOnFocusChange" : true,
+  "alternativeDisplays" : "",
+  "centerCursorOnFocusChange" : false,
+  "centerCursorOnWorkspaceChange" : false,
+  "changeWorkspaceOnAppAssign" : true,
+  "checkForUpdatesAutomatically" : false,
+  "displayMode" : "static",
+  "enableFocusManagement" : true,
+  "enableIntegrations" : false,
+  "enablePictureInPictureSupport" : true,
+  "enableSpaceControl" : true,
+  "enableSpaceControlAnimations" : true,
+  "enableSwipeGestures" : true,
+  "enableWorkspaceTransitions" : false,
+  "floatingApps" : [
+    {
+      "bundleIdentifier" : "com.colliderli.iina",
+      "iconPath" : "/Applications/IINA.app/Contents/Resources/AppIcon.icns",
+      "name" : "IINA"
+    },
+    {
+      "bundleIdentifier" : "com.bilibili.bilibiliPC",
+      "iconPath" : "/Applications/哔哩哔哩.app/Contents/Resources/icon.icns",
+      "name" : "哔哩哔哩"
+    },
+    {
+      "bundleIdentifier" : "com.apple.Preview",
+      "iconPath" : "/System/Applications/Preview.app/Contents/Resources/AppIcon.icns",
+      "name" : "Preview"
+    },
+    {
+      "bundleIdentifier" : "com.apple.ActivityMonitor",
+      "iconPath" : "/System/Applications/Utilities/Activity Monitor.app/Contents/Resources/AppIcon.icns",
+      "name" : "Activity Monitor"
+    },
+    {
+      "bundleIdentifier" : "com.apple.systempreferences",
+      "iconPath" : "/System/Applications/System Settings.app/Contents/Resources/SystemSettings.icns",
+      "name" : "System Settings"
+    }
+  ],
+  "focusFrontmostWindow" : false,
+  "focusNextWorkspaceApp" : "opt+shift+j",
+  "focusNextWorkspaceWindow" : "opt+j",
+  "focusPreviousWorkspaceApp" : "opt+shift+k",
+  "focusPreviousWorkspaceWindow" : "opt+k",
+  "keepUnassignedAppsOnSwitch" : false,
+  "loopWorkspaces" : true,
+  "menuBarDisplayAliases" : "",
+  "menuBarTitleTemplate" : "$WORKSPACE",
+  "pipApps" : [
+
+  ],
+  "pipScreenCornerOffset" : 15,
+  "restartAppOnWakeUp" : false,
+  "restoreHiddenAppsOnSwitch" : true,
+  "runScriptOnLaunch" : "",
+  "runScriptOnProfileChange" : "sketchybar --reload",
+  "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
+  "showFloatingNotifications" : true,
+  "showMenuBarIcon" : true,
+  "showMenuBarTitle" : true,
+  "showSpaceControl" : "opt+c",
+  "skipEmptyWorkspacesOnSwitch" : true,
+  "spaceControlCurrentDisplayWorkspaces" : false,
+  "spaceControlMaxColumns" : 6,
+  "swipeDown3FingerAction" : "none",
+  "swipeDown4FingerAction" : "none",
+  "swipeLeft3FingerAction" : "none",
+  "swipeLeft4FingerAction" : "nextWorkspace",
+  "swipeRight3FingerAction" : "none",
+  "swipeRight4FingerAction" : "previousWorkspace",
+  "swipeThreshold" : 0.2,
+  "swipeUp3FingerAction" : "none",
+  "swipeUp4FingerAction" : "none",
+  "switchToNextWorkspace" : "opt+shift+]",
+  "switchToPreviousWorkspace" : "opt+shift+[",
+  "switchToRecentWorkspace" : "opt+tab",
+  "switchWorkspaceWhenPipCloses" : true,
+  "toggleFocusedAppAssignment" : "opt+`",
+  "toggleTheFocusedAppFloating" : "opt+f",
+  "workspaceTransitionDimming" : 0.35000000000000003,
+  "workspaceTransitionDuration" : 0.2
+}

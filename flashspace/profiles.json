@@ -1,0 +1,185 @@
+{
+  "profiles" : [
+    {
+      "id" : "EE037C84-BD91-45DE-940B-A39B91405DE6",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.coderforart.MWeb3",
+              "iconPath" : "/Applications/MWeb Pro.app/Contents/Resources/AppIconPro.icns",
+              "name" : "MWeb Pro"
+            },
+            {
+              "bundleIdentifier" : "net.kovidgoyal.kitty",
+              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+              "name" : "kitty"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
+            },
+            {
+              "bundleIdentifier" : "com.google.antigravity",
+              "iconPath" : "/Applications/Antigravity.app/Contents/Resources/Antigravity.icns",
+              "name" : "Antigravity"
+            },
+            {
+              "bundleIdentifier" : "dev.kiro.desktop",
+              "iconPath" : "/Applications/Kiro.app/Contents/Resources/Kiro.icns",
+              "name" : "Kiro"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+1",
+          "display" : "LEN L27q-30",
+          "id" : "72CBD8A5-4875-44B4-B5A6-326E7A44F512",
+          "name" : "Code",
+          "shortcut" : "opt+1",
+          "symbolIconName" : "newspaper"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "org.mozilla.firefox",
+              "iconPath" : "/Applications/Firefox.app/Contents/Resources/firefox.icns",
+              "name" : "Firefox"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari",
+              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "name" : "Safari"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.edgemac",
+              "iconPath" : "/Applications/Microsoft Edge.app/Contents/Resources/app.icns",
+              "name" : "Microsoft Edge"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.4EECC0F6-13EA-47A5-9FB2-BE947BD0304E",
+              "iconPath" : "/Users/ketch/Applications/YouTube.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "YouTube"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+2",
+          "display" : "LEN L27q-30",
+          "id" : "0B4A3183-4968-4084-9826-B7099C1E0F7B",
+          "name" : "Browser",
+          "shortcut" : "opt+2",
+          "symbolIconName" : "network"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.microsoft.Word",
+              "iconPath" : "/Applications/Microsoft Word.app/Contents/Resources/MSWD.icns",
+              "name" : "Microsoft Word"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.Excel",
+              "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/XCEL.icns",
+              "name" : "Microsoft Excel"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.Powerpoint",
+              "iconPath" : "/Applications/Microsoft PowerPoint.app/Contents/Resources/PPT3.icns",
+              "name" : "Microsoft PowerPoint"
+            },
+            {
+              "bundleIdentifier" : "org.zotero.zotero",
+              "iconPath" : "/Applications/Zotero.app/Contents/Resources/zotero.icns",
+              "name" : "Zotero"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iBooksX",
+              "iconPath" : "/System/Applications/Books.app/Contents/Resources/AppIcon.icns",
+              "name" : "Books"
+            },
+            {
+              "bundleIdentifier" : "net.sourceforge.skim-app.skim",
+              "iconPath" : "/Applications/Skim.app/Contents/Resources/Skim.icns",
+              "name" : "Skim"
+            },
+            {
+              "bundleIdentifier" : "com.readdle.PDFExpert-Mac",
+              "iconPath" : "/Applications/PDF Expert.app/Contents/Resources/AppIcon.icns",
+              "name" : "PDF Expert"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+3",
+          "display" : "LEN L27q-30",
+          "id" : "3BCF7D30-9942-47F5-A6C8-279207951DD3",
+          "name" : "Office",
+          "shortcut" : "opt+3",
+          "symbolIconName" : "books.vertical"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "org.mozilla.thunderbird",
+              "iconPath" : "/Applications/Thunderbird.app/Contents/Resources/thunderbird.icns",
+              "name" : "Thunderbird"
+            },
+            {
+              "bundleIdentifier" : "com.apple.mail",
+              "iconPath" : "/System/Applications/Mail.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "Mail"
+            },
+            {
+              "bundleIdentifier" : "com.hnc.Discord",
+              "iconPath" : "/Applications/Discord.app/Contents/Resources/electron.icns",
+              "name" : "Discord"
+            },
+            {
+              "bundleIdentifier" : "com.tencent.xinWeChat",
+              "iconPath" : "/Applications/WeChat.app/Contents/Resources/AppIcon.icns",
+              "name" : "WeChat"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/icon.icns",
+              "name" : "Microsoft Teams"
+            },
+            {
+              "bundleIdentifier" : "net.whatsapp.WhatsApp",
+              "iconPath" : "/Applications/WhatsApp.app/Contents/Resources/AppIconCatalystRelease.icns",
+              "name" : "‎WhatsApp"
+            },
+            {
+              "bundleIdentifier" : "us.zoom.xos",
+              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
+              "name" : "zoom.us"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.68442B54-BB87-4752-AFB2-4561FF134F04",
+              "iconPath" : "/Users/ketch/Applications/GMX Mail.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "GMX Mail"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+4",
+          "display" : "LEN L27q-30",
+          "id" : "905F92AB-73E4-4F0E-B8F9-98A0BED4A76C",
+          "name" : "Social",
+          "shortcut" : "opt+4",
+          "symbolIconName" : "message.badge"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.bilibili.bilibiliPC",
+              "iconPath" : "/Applications/哔哩哔哩.app/Contents/Resources/icon.icns",
+              "name" : "哔哩哔哩"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+5",
+          "display" : "LEN L27q-30",
+          "id" : "9F7695CB-016E-4DCD-80E6-898916E6B26B",
+          "name" : "Entertainment",
+          "shortcut" : "opt+5",
+          "symbolIconName" : "play.house"
+        }
+      ]
+    }
+  ]
+}

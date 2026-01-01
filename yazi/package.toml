@@ -1,5 +1,17 @@
-[plugin]
-deps = [{ use = "yazi-rs/plugins:full-border", rev = "71c4fc2" }, { use = "yazi-rs/plugins:max-preview", rev = "71c4fc2" }, { use = "yazi-rs/plugins:hide-preview", rev = "71c4fc2" }, { use = "yazi-rs/plugins:git", rev = "71c4fc2" }, { use = "h-hg/yamb", rev = "108347b" }, { use = "KKV9/compress", rev = "60b24af" }]
+[[plugin.deps]]
+use = "h-hg/yamb"
+rev = "22af003"
+hash = "7cc42012a7c2099f80064d228feb8d44"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "aeca767"
+hash = "bf6f074cd41ee33c3360341d168f9733"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "1ee69a5"
+hash = "63679f3daf8551ff8755be38b5ced0f"
 
 [flavor]
 deps = []

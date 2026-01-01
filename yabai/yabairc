@@ -68,8 +68,6 @@ yabai -m rule --add app="^Activity Monitor$" manage=off grid=10:8:3:1:4:6
 yabai -m rule --add app="^App Store$" manage=off grid=20:20:3:2:14:16
 yabai -m rule --add app="^Finder$" manage=off grid=20:20:3:2:14:16
 yabai -m rule --add app="^Mail$" space=mail
-yabai -m rule --add app="^python$" manage=off
-yabai -m rule --add app="^turtlesim_node$" manage=off
 yabai -m rule --add app="^MATLAB" space=matlab manage=off grid=20:20:3:2:14:16
 yabai -m rule --add app="^Zotero$" space=doc
 yabai -m rule --add app="^PDF Expert$" space=doc
@@ -83,7 +81,6 @@ yabai -m rule --add app="^Microsoft PowerPoint" space=doc
 yabai -m rule --add app="^EuDic$" manage=off grid=20:20:3:2:14:16
 yabai -m rule --add app="^德语助手$" manage=off grid=20:20:3:2:14:16
 yabai -m rule --add app="^pot$" manage=off
-yabai -m rule --add app="^qml$" manage=off
 yabai -m rule --add app="^Tencent Lemon$" manage=off
 yabai -m rule --add app="^哔哩哔哩$" space=entertainment manage=off grid=20:20:3:2:14:16
 yabai -m rule --add app="^Spotify$" space=entertainment manage=off grid=20:20:3:2:14:16
@@ -101,6 +98,12 @@ yabai -m rule --add app="^Code$" space=code
 yabai -m rule --add app="^Google Chrome$" space=web
 yabai -m rule --add app="^Firefox$" space=web
 
+yabai -m rule --add app="^python$" manage=off
+yabai -m rule --add app="^qml$" manage=off
+yabai -m rule --add app="^turtlesim_node$" manage=off
+yabai -m rule --add title="^Qt window$" manage=off
+yabai -m rule --add title="^Demo$" manage=off
+yabai -m rule --add title="^uebung_*$" manage=off
 
 # Scratchpad
 yabai -m rule --add app="kitty" title="Scratchpad" scratchpad="terminal" grid=20:20:3:2:14:16
@@ -111,8 +114,5 @@ yabai -m signal --add event=window_created action='sh ~/.config/yabai/scripts/wi
 yabai -m signal --add event=window_destroyed action='sketchybar --trigger window_destroy'
 yabai -m signal --add event=window_deminimized action='sketchybar --trigger window_deminimize'
 yabai -m signal --add event=window_minimized action='sketchybar --trigger window_minimize'
-
-# borders
-borders active_color=0xfffab387 inactive_color=0xff45475a width=3.0 &
 
 echo "yabai configuration loaded.."

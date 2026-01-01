@@ -32,29 +32,29 @@ alias latexindent='/opt/homebrew/bin/latexindent'
 alias jnb='jupyter notebook'
 alias jlab='jupyter-lab'
 
-# usic
-# alias uplay='usic 1>/dev/null && usic play "$(command find $USIC_PLAYLIST -type f | fzf | xargs -I{} sh -c "command cat "{}" | fzf")"'
-
 # python
 alias pipu='pip install --upgrade'
-alias condaa='conda activate'
-alias condad='conda deactivate'
-alias maa='mamba activate'
-alias mad='mamba deactivate'
+alias mba='mamba activate'
+alias mbd='mamba deactivate'
+alias mmb='micromamba'
+alias mmba='micromamba activate'
+alias mmbd='micromamba deactivate'
+
+# mujoco
+alias mujoco='/Applications/MuJoCo.app/Contents/MacOS/simulate'
+alias mujoco_basic='/Applications/MuJoCo.app/Contents/MacOS/basic'
+alias mujoco_compile='/Applications/MuJoCo.app/Contents/MacOS/compile'
 
 # scripts
-# alias preview='sh ~/scripts/preview.sh'
-# alias true-color='sh ~/scripts/true-color.sh'
+alias preview='sh ~/scripts/preview.sh'
+alias true-color='sh ~/scripts/true-color.sh'
 
 if [ "(( $+commands[bat] ))" ]; then
     unalias -m 'cat'
     alias cat='bat'
 fi
 
-if [ "(( $+commands[exz] ))" ]; then
+if [ "(( $+commands[eza] ))" ]; then
     unalias -m 'ls'
-    alias ls='exz --color always --icons'
+    alias ls='eza --color always --icons'
 fi
-
-# cluser
-alias sshcluster='ssh kz35buho@lcluster13.hrz.tu-darmstadt.de'

@@ -8,18 +8,21 @@ if status is-interactive
     set -gx CARGO_HOME $HOME/rust/.cargo
     set -gx CC (brew --prefix llvm)/bin/clang
     set -gx CXX (brew --prefix llvm)/bin/clang++
-    set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
-    set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
-    set -gx LDFLAGS -L/opt/homebrew/opt/curl/lib
-    set -gx CPPFLAGS -I/opt/homebrew/opt/curl/include
 
-    set -gx EDITOR hx
+    set -gx EDITOR nvim
 
     set fish_greeting ''
+
+    # flag
+    add_flag LDFLAGS -L/opt/homebrew/opt/llvm/lib
+    add_flag LDFLAGS -L/opt/homebrew/opt/curl/lib
+    add_flag CPPFLAGS -I/opt/homebrew/opt/llvm/include
+    add_flag CPPFLAGS -I/opt/homebrew/opt/curl/include
 
     # path
     fish_add_path -g /opt/homebrew/bin
     fish_add_path -g /opt/homebrew/sbin
+    fish_add_path -g $HOME/micromamba/bin
     fish_add_path -g $GOPATH/bin
     fish_add_path -g $CARGO_HOME/bin
     fish_add_path -g /opt/homebrew/opt/llvm/bin
@@ -39,7 +42,6 @@ if status is-interactive
     # alias
     alias c="clear"
     alias n="fastfetch"
-    alias s!="source ~/.config/fish/**/*.fish"
     alias ra="yy"
     alias td="tldr"
     alias tk='tokei'
@@ -53,12 +55,17 @@ if status is-interactive
     alias br='brew rmtree'
     alias bc='brew cleanup'
     alias bl='brew list'
-    alias condaa='conda activate'
-    alias condad='conda deactivate'
-    alias maa='mamba activate'
-    alias mad='mamba deactivate'
+    alias mba='mamba activate'
+    alias mbd='mamba deactivate'
+    alias mmb='micromamba'
+    alias mmba='micromamba activate'
+    alias mmbd='micromamba deactivate'
     alias preview='sh ~/scripts/preview.sh'
     alias true-color='sh ~/scripts/true-color.sh'
+    alias mujoco='/Applications/MuJoCo.app/Contents/MacOS/simulate'
+    alias mujoco_basic='/Applications/MuJoCo.app/Contents/MacOS/basic'
+    alias mujoco_compile='/Applications/MuJoCo.app/Contents/MacOS/compile'
+    alias surf='/Applications/Windsurf.app/Contents/MacOS/Electron'
 
     if type -q bat
         functions -e cat
@@ -85,3 +92,11 @@ if status is-interactive
     # thefuck
     thefuck --alias f | source
 end
+
+# Set theme
+source $XDG_CONFIG_HOME/fish/themes/$THEME.fish
+
+# Added by Antigravity
+fish_add_path /Users/ketch/.antigravity/antigravity/bin
+
+string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)

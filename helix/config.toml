@@ -1,0 +1,48 @@
+theme = "catppuccin_mocha_custom"
+
+[editor]
+mouse = false
+completion-timeout = 5
+line-number = "relative"
+cursorline = true
+bufferline = "multiple"
+default-yank-register = "+"
+color-modes = true
+text-width = 120
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spacer", "diagnostics", "spinner"]
+center = [
+    "file-name",
+    "read-only-indicator",
+    "file-modification-indicator",
+    "file-encoding",
+]
+right = ["selections", "register", "position-percentage", "position"]
+
+[editor.indent-guides]
+render = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+# [editor.lsp]
+# display-inlay-hints = true
+
+[keys.normal]
+q = "record_macro"
+Q = "replay_macro"
+Cmd-s = ":write"
+ret = "expand_selection"
+backspace = "shrink_selection"
+
+[keys.select]
+q = "record_macro"
+Q = "replay_macro"
+Cmd-s = ":write"
+ret = "expand_selection"
+backspace = "shrink_selection"

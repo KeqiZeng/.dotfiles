@@ -1,17 +1,29 @@
-[manager]
-ratio          = [ 1, 2, 2 ]
-linemode       = "size"
+[mgr]
+ratio = [1, 2, 2]
+linemode = "size"
 
 [preview]
-max_width  = 1200
+max_width = 1200
 max_height = 1800
 
 [[plugin.prepend_fetchers]]
-id   = "git"
+id = "git"
 name = "*"
-run  = "git"
+run = "git"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
+id = "git"
 name = "*/"
-run  = "git"
+run = "git"
+
+[plugin]
+prepend_previewers = [
+	# Archive previewer
+	{ mime = "application/*zip",            run = "ouch" },
+	{ mime = "application/x-tar",           run = "ouch" },
+	{ mime = "application/x-bzip2",         run = "ouch" },
+	{ mime = "application/x-7z-compressed", run = "ouch" },
+	{ mime = "application/x-rar",           run = "ouch" },
+  { mime = "application/x-xz",            run = "ouch" },
+	{ mime = "application/xz",              run = "ouch" },
+]

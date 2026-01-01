@@ -1,0 +1,34 @@
+[language-server.buffer-language-server]
+command = "buffer-language-server"
+
+[[language]]
+name = "c"
+language-servers = [ "clangd" ]
+
+[[language]]
+name = "cpp"
+language-servers = [ "clangd" ]
+
+[[language]]
+name = "python"
+language-servers = [ "basedpyright" ]
+
+[[language]]
+name = "rust"
+language-servers = [ "rust-analyzer" ]
+
+[[language]]
+name = "cmake"
+language-servers = [ "cmake-language-server", "buffer-language-server" ]
+
+[[language]]
+name = "yaml"
+language-servers = [ "buffer-language-server" ]
+
+[[language]]
+name = "toml"
+language-servers = [ "buffer-language-server" ]
+
+[[language]]
+name = "xml"
+language-servers = [ "buffer-language-server" ]

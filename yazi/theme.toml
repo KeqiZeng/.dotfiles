@@ -1,13 +1,13 @@
 # : Flavor {{{
 
 [flavor]
-use = "catppuccin-mocha"
+use = "$YAZI_THEME"
 
 # : }}}
 
 # : Manager {{{
 
-[manager]
+[mgr]
 preview_hovered = { bold = true, italic = true }
 
 # # : }}}

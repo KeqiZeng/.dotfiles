@@ -1,15 +1,15 @@
-# auto download uz to manage plugins
-[[ -d ~/.dotfiles/zsh/uz ]] || git clone https://github.com/KeqiZeng/uz ~/.dotfiles/zsh/uz
+export ZIPPO_PATH=$HOME/.uz
+[[ -d $ZIPPO_PATH ]] || git clone https://github.com/KeqiZeng/uz $ZIPPO_PATH
 
-declare -A plugins
+typeset -A plugins
 
 plugins=(
-  ['zsh-users/zsh-completions']="( [completion]=0 [frozen]=1 )" # 0: true 1: false
-  ['esc/conda-zsh-completion']="( [completion]=0 [frozen]=1 )"
-  ['Aloxaf/fzf-tab']="( [completion]=1 [frozen]=1 )"
-  ['zsh-users/zsh-autosuggestions']="( [completion]=1 [frozen]=1 )"
-  ['hlissner/zsh-autopair']="( [completion]=1 [frozen]=1 )"
-  ['zdharma-continuum/fast-syntax-highlighting']="( [completion]=1 [frozen]=1 )"
+  zsh-users/zsh-completions "[completion]=true"
+  esc/conda-zsh-completion "[completion]=true"
+  Aloxaf/fzf-tab ""
+  hlissner/zsh-autopair ""
+  zsh-users/zsh-autosuggestions "[commit]=f9526195c50ddf2cec64e0ce6310bc5a68d4c340"
+  zsh-users/zsh-syntax-highlighting "[script]=zsh-syntax-highlighting.zsh"
 )
 
-source ~/.dotfiles/zsh/uz/uz.zsh
+source ${ZIPPO_PATH}/zippo.zsh

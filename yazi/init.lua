@@ -1,30 +1,47 @@
-require("full-border"):setup {
-	type = ui.Border.ROUNDED,
-}
+-- git
+th.git = th.git or {}
+th.git.modified_sign = "~"
+th.git.added_sign = "+"
+th.git.untracked_sign = "?"
+th.git.ignored_sign = "i"
+th.git.deleted_sign = "-"
+th.git.updated_sign = "u"
+require("git"):setup()
 
-THEME.git = THEME.git or {}
-THEME.git.modified = ui.Style():fg("#f9e2af")
-THEME.git.added = ui.Style():fg("#a6e3a1")
-THEME.git.untracked = ui.Style():fg("#b4befe")
-THEME.git.ignored = ui.Style():fg("#9399b2")
-THEME.git.deleted = ui.Style():fg("#f38ba8")
-THEME.git.updated = ui.Style():fg("#89b4fa")
+-- yamb
+local bookmarks = {}
 
--- THEME.git.modified_sign = " "
--- THEME.git.added_sign = " "
--- THEME.git.untracked_sign = " "
--- THEME.git.ignored_sign = " "
--- THEME.git.deleted_sign = " "
--- THEME.git.updated_sign = "󰚰 "
-THEME.git.modified_sign = "~"
-THEME.git.added_sign = "+"
-THEME.git.untracked_sign = "?"
-THEME.git.ignored_sign = "i"
-THEME.git.deleted_sign = "-"
-THEME.git.updated_sign = "u"
+local path_sep = package.config:sub(1, 1)
+local home_path = ya.target_family() == "windows" and os.getenv("USERPROFILE") or os.getenv("HOME")
+if ya.target_family() == "windows" then
+    table.insert(bookmarks, {
+        tag = "Scoop Local",
 
-require("git"):setup{}
+        path = (os.getenv("SCOOP") or home_path .. "\\scoop") .. "\\",
+        key = "p"
+    })
+    table.insert(bookmarks, {
+        tag = "Scoop Global",
+        path = (os.getenv("SCOOP_GLOBAL") or "C:\\ProgramData\\scoop") .. "\\",
+        key = "P"
+    })
+end
+table.insert(bookmarks, {
+    tag = "Desktop",
+    path = home_path .. path_sep .. "Desktop" .. path_sep,
+    key = "d"
+})
 
 require("yamb"):setup {
-	cli = "fzf",
+    -- Optional, the path ending with path seperator represents folder.
+    bookmarks = bookmarks,
+    -- Optional, recieve notification everytime you jump.
+    jump_notify = true,
+    -- Optional, the cli of fzf.
+    cli = "fzf",
+    -- Optional, a string used for randomly generating keys, where the preceding characters have higher priority.
+    keys = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    -- Optional, the path of bookmarks
+    path = (ya.target_family() == "windows" and os.getenv("APPDATA") .. "\\yazi\\config\\bookmark") or
+        (os.getenv("HOME") .. "/.config/yazi/bookmark"),
 }

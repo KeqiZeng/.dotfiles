@@ -1,3 +1,4 @@
+# config
 export XDG_CONFIG_HOME=$HOME/.config
 
 #homebrew
@@ -9,10 +10,6 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 # tealdeer
 export TEALDEER_CONFIG_DIR=$XDG_CONFIG_HOME/tealdeer
 
-# usic
-export USIC_LIBRARY=~/Music/usic
-export USIC_PLAYLIST=$USIC_LIBRARY/playList
-
 # autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#9399b2"
 
@@ -21,6 +18,8 @@ export SCRIPTS=$HOME/scripts
 
 # llvm
 export LLVM_BIN=/opt/homebrew/opt/llvm/bin
+export LDFLAGS=$LDFLAGS:"-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS=$CPPFLAGS:"-I/opt/homebrew/opt/llvm/include"
 
 # golang
 export GOPATH=$HOME/go
@@ -46,18 +45,4 @@ export MASON_BIN=$HOME/.local/share/nvim/mason/bin
 # pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
-# conda
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-  eval "$__conda_setup"
-else
-  if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-    . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-  else
-    # export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-    export CONDA_BIN=/opt/homebrew/Caskroom/miniforge/base/bin
-  fi
-fi
-unset __conda_setup
-
-export PATH=$PATH:$HOMEBREW_BIN:$SCRIPTS:$LLVM_BIN:$GOBIN:$JAVA_HOME:$CARGO_BIN:$MASON_BIN:$CONDA_BIN
+export PATH=$PATH:$HOMEBREW_BIN:$SCRIPTS:$LLVM_BIN:$GOBIN:$JAVA_HOME:$CARGO_BIN:$MASON_BIN
