@@ -13,5 +13,12 @@ use = "ndtoan96/ouch"
 rev = "1ee69a5"
 hash = "63679f3daf8551ff8755be38b5ced0f"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "9276ffa"
+hash = "b951d27afe197d154f6da9683b46c5f8"
+
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "5f56364"
+hash = "ea25e1f0f25b0521ef78fd4e9698ff52"
